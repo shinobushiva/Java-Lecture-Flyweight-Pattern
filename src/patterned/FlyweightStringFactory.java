@@ -14,7 +14,7 @@ public class FlyweightStringFactory {
 	}
 
 	public FlyweightString create(String str) {
-		if (map.containsKey(str))
+		if (!map.containsKey(str))
 			map.put(str, new FlyweightString(str));
 
 		return map.get(str);
